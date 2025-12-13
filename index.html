@@ -1,0 +1,1140 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أسبوع خبراء الإعلانات للبارافارما 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+        font-family: 'Tunisia';
+        src: url('alfont_com_Hacen-Tunisia.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'montserrat', sans-serif; 
+            line-height: 1.6; 
+            color: #0b3f59; 
+            overflow-x: hidden;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero Section */
+        .hero { 
+            font-family: 'Tunisia', sans-serif !important;
+            background-image: url('heropic.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 100px 0; 
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                rgba(255,255,255,0.8),
+                rgba(255,255,255,0.4),
+                rgba(0,0,0,0.4),
+                rgba(0,0,0,0.4)
+            );
+            z-index: 0;
+        }
+        /* .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            z-index: 0;
+        } */
+        .hero-content { 
+            position: relative; z-index: 1;
+            background: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+            padding: 30px;
+            border-radius: 20px;
+            display: inline-block;
+}
+        .hero h1 { 
+            font-size: 3.4em; 
+            margin-bottom: 20px; 
+            font-weight: 800;
+            /* text-shadow: 0 2px 10px rgba(0,0,0,0.3); */
+            color:#0b3f59;
+
+            margin: 0 auto;
+        }
+        .hero h2 { 
+            font-size: 2em; 
+            color: #0b3f59;; 
+            margin-bottom: 20px; 
+            font-weight: 700;
+            /* text-shadow: 1px 2px 10px rgb(250, 250, 250);     */
+            -webkit-text-stroke: 1px #0b3f59;
+            margin: 0  auto;
+            
+        }
+        .hero p { 
+            font-size: 1.5em; 
+            max-width: 800px; 
+            margin: 0 auto 40px; 
+            font-weight: 500;
+            color: #fff;
+        }
+        .btn-primary { 
+            background: #dcfe11; 
+            color: #0b3f59; 
+            padding: 18px 40px; 
+            font-size: 1.2em; 
+            border: none; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            text-decoration: none; 
+            display: inline-block; 
+            transition: all 0.3s; 
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .btn-primary:hover { 
+            background: #ccfa04; 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Hero Logos */
+        .hero-logo {
+            position: absolute;
+            top: 10px;
+            width: 200px;
+            height: auto;
+            z-index: 2;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        .hero-logo:hover {
+            opacity: 1;
+        }
+        .hero-logo-left {
+            left: 30px;
+        }
+        .hero-logo-right {
+            right: 30px;
+        }
+
+        /* Video Conversion Section - Enhanced */
+        .video-section {
+            background: #f8fcff;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        .section-title {
+            color: #16498c;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .section-subtitle {
+            color: #0b3f59;
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-weight: 500;
+        }
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,148,217,0.25);
+        }
+        .video-placeholder {
+            background: none;
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-element {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .play-button {
+            width: 90px;
+            height: 90px;
+            background: #dcfe11;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #ccfa04;
+        }
+        .play-button::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid #0b3f59;
+            margin-left: 5px;
+        }
+        .pause-button {
+            width: 90px;
+            height: 90px;
+            background: #dcfe11;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+        .pause-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: #ccfa04;
+        }
+        .pause-button::before,
+        .pause-button::after {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 20px;
+            background: #0b3f59;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .pause-button::before {
+            left: 36px;
+        }
+        .pause-button::after {
+            right: 36px;
+        }
+        .video-info {
+            background: white;
+            padding: 30px;
+            text-align: left;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .video-info h3 {
+            color: #16498c;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-align: center  ;
+        }
+        .video-info p {
+            color: #0b3f59;
+            margin-bottom: 15px;
+            text-align: center  ;
+        }
+        .video-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .benefit {
+            display: flex;
+            align-items: center;
+            background: #e6f7ff;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        .benefit::before {
+            content: '✓';
+            color: #0094d9;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        /* Why This Event */
+        .why-event { 
+            background: #ffffff; 
+            padding: 100px 0 80px; 
+        }
+        .section-heading {
+            color: #16498c; 
+            font-size: 2.5em; 
+            text-align: center; 
+            margin-bottom: 60px;
+            font-weight: 700;
+            position: relative;
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #0094d9;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        .features { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 35px; 
+            margin-top: 30px;
+        }
+        .feature { 
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            background: #f8fcff;
+            transition: all 0.3s ease;
+            border: 1px solid #e6f7ff;
+            border-radius: 15px;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,148,217,0.15);
+            border-color: #0094d9;
+        }
+        .feature img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s;
+        }
+        .feature:hover img {
+            transform: scale(1.05);
+        }
+        .feature .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 15px;
+            transition: transform 0.3s;
+        }
+        .feature:hover .content {
+            transform: translateY(-10px);
+        }
+        .feature h3 { 
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #16498c;
+        }
+        .feature p { 
+            margin: 0;
+            font-size: 1em;
+            color: #0b3f59;
+        }
+
+        /* Target Audience */
+        .audience { 
+            background: #f8fcff; 
+            padding: 100px 0; 
+            border-top: 5px solid #0094d9; 
+            border-bottom: 5px solid #0094d9; 
+        }
+        .audience h2 { 
+            color: #1875bb; 
+            font-size: 2.5em; 
+            text-align: center; 
+            margin-bottom: 50px; 
+            font-weight: 700;
+        }
+        .audience-list { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 40px;
+        }
+        .audience-item { 
+            background: #ffffff; 
+            padding: 25px 50px 25px 30px; 
+            border-radius: 12px; 
+            border-left: 5px solid #0094d9; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .audience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #dcfe11;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s ease;
+        }
+        .audience-item:hover::before {
+            transform: scaleY(1);
+        }
+        .audience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .audience-item::after {
+            content: '>';
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+            color: #0094d9;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Speakers */
+        .speakers { 
+            background: #ffffff; 
+            padding: 100px 0; 
+        }
+        .speakers h2 { 
+            color: #16498c; 
+            font-size: 2.5em; 
+            text-align: center; 
+            margin-bottom: 35px; 
+            font-weight: 700;
+        }
+        .speakers p { 
+            font-size: 1.3em; 
+            text-align: center; 
+            max-width: 800px; 
+            margin: 0 auto 60px; 
+            color: #0b3f59;
+            line-height: 1.8;
+        }
+        .speakers-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .speaker {
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            background: #f8fcff;
+            transition: all 0.3s ease;
+            border: 1px solid #e6f7ff;
+            border-radius: 15px;
+        }
+        .speaker:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,148,217,0.15);
+            border-color: #0094d9;
+        }
+        .speaker img {
+            width: 100%;
+            height: 75%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .speaker:hover img {
+            transform: scale(1.05);
+        }
+        .speaker .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 25%;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 15px;
+            transition: transform 0.3s;
+        }
+        .speaker:hover .content {
+            transform: translateY(-10px);
+        }
+        .speaker h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #16498c;
+        }
+        .speaker p {
+            margin: 0;
+            font-size: 1em;
+            color: #0b3f59;
+        }
+
+        /* FAQ */
+        .faq { 
+            background: rgba(0,148,217,0.06); 
+            padding: 100px 0; 
+        }
+        .faq h2 { 
+            color: #16498c; 
+            font-size: 2.5em; 
+            text-align: center; 
+            margin-bottom: 60px; 
+            font-weight: 700;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item { 
+            background: #ffffff; 
+            margin-bottom: 25px; 
+            border-radius: 15px; 
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .faq-question {
+            padding: 25px 30px;
+            background: #f8fcff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.3em;
+            color: #1875bb;
+        }
+        .faq-answer {
+            padding: 25px 30px;
+            color: #0b3f59;
+            font-size: 1.1em;
+            line-height: 1.7;
+            border-top: 1px solid #e6f7ff;
+        }
+
+        /* Final CTA */
+        .final-cta { 
+            background: linear-gradient(135deg, #16498c 0%, #0b3f59 100%); 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 100px 0; 
+            position: relative;
+            overflow: hidden;
+        }
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2"/></svg>');
+            background-size: 200px;
+        }
+        .final-cta-content { position: relative; z-index: 1; }
+        .final-cta h2 { 
+            color: #dcfe11; 
+            font-size: 2.8em; 
+            margin-bottom: 25px; 
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .final-cta p { 
+            font-size: 1.3em; 
+            max-width: 750px; 
+            margin: 0 auto 45px; 
+            font-weight: 500;
+        }
+
+        /* Form Area */
+        .form-area { 
+            background: #ffffff; 
+            padding: 100px 0 80px; 
+            box-shadow: 0 -10px 50px rgba(0,0,0,0.1);
+        }
+        .form-container { 
+            max-width: 700px; 
+            margin: 0 auto; 
+            background: #ffffff; 
+            padding: 50px; 
+            border-radius: 20px; 
+            border: 3px solid #0094d9;
+            box-shadow: 0 15px 50px rgba(0,148,217,0.15);
+        }
+        .form-title {
+            color: #16498c;
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .form-subtitle {
+            color: #0b3f59;
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .form-row {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        .form-group { 
+            flex: 1;
+            margin-bottom: 25px; 
+        }
+        .form-group label { 
+            display: block; 
+            color: #16498c; 
+            margin-bottom: 10px; 
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea { 
+            width: 100%; 
+            padding: 16px 20px; 
+            border: 2px solid #0094d9; 
+            border-radius: 12px; 
+            font-size: 1.1em; 
+            font-family: 'montserrat', sans-serif;
+            transition: all 0.3s; 
+        }
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus { 
+            outline: none; 
+            border-color: #dcfe11; 
+            box-shadow: 0 0 0 3px rgba(220, 254, 17, 0.3);
+        }
+        .submit-btn { 
+            width: 100%; 
+            background: #b4dc02; 
+            color: #0b3f59; 
+            padding: 18px; 
+            font-size: 1.3em; 
+            border: none; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            transition: all 0.3s; 
+            box-shadow: 0 4px 15px rgba(180, 220, 2, 0.3);
+            font-family: 'montserrat', sans-serif;
+        }
+        .submit-btn:hover { 
+            background: #ccfa04; 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 20px rgba(180, 220, 2, 0.5);
+        }
+        .form-note {
+            text-align: center; 
+            margin-top: 30px; 
+            font-size: 0.95em; 
+            color: #666;
+            padding-top: 25px;
+            border-top: 1px solid #e6f7ff;
+        }
+        .form-note strong {
+            color: #16498c;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0b3f59;
+            color: white;
+            text-align: center;
+            padding: 40px 0 30px;
+        }
+        .footer-logo {
+            font-size: 1.8em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #dcfe11;
+        }
+        .footer-text {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            opacity: 0.9;
+        }
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #dcfe11;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2em; }
+            .hero h2 { font-size: 1.5em; }
+            .hero p { font-size: 1em; }
+            .section-title { font-size: 2em; }
+            .features, .audience-list, .speakers-list { grid-template-columns: 1fr; }
+            .form-row { flex-direction: column; gap: 0; }
+            .video-container { margin: 0 10px; }
+            .final-cta h2 { font-size: 2.2em; }
+            .hero-logo {
+                width: 150px;
+                top: 20px;
+            }
+            .hero-logo-left {
+                left: 15px;
+            }
+            .hero-logo-right {
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Hero Section -->
+    <section class="hero">
+        <!-- Logo in top left -->
+        <img src="logo-left.png" alt="Left Logo" class="hero-logo hero-logo-left">
+        <!-- Logo in top right -->
+        <img src="logo-right.png" alt="Right Logo" class="hero-logo hero-logo-right">
+        <div class="container">
+            <div class="hero-content">
+                <h1>أكبر أسبوع رقمي مجاني لخبراء إعلانات البارافارما 2026</h1>
+                <h2>فرصة حقيقية للبارافارما والشركات المصنّعة للمنتجات البارافارماسيّة لتطوير الإشهار الرقمي ورفع المبيعات.</h2>
+                <p>انضمّوا إلى <span style="color:#0b3f59; font-weight: 500;">"أسبوع الميديا بايرز 2026"</span> الذي يجمع خبراء الإشهار الرقمي المتخصصين في قطاع البارافارما، واكتشفوا كيف يمكن للإعلانات الاحترافية أن ترفع نموّكم وتزيد مبيعاتكم بطريقة فعّالة ومضمونة.</p>
+                <a href="#form" class="btn-primary">سجّلوا الآن مجاناً</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Conversion Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title"> شاهد فيديو التعريفي بالحدث المجاني</h2>
+            <p class="section-subtitle">رسالة خاصة من المنظمين تشرح القيمة الحقيقية التي ستحصلون عليها من خلال المشاركة في هذا الحدث الاستثنائي</p>
+            
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <video class="video-element" src="video.mp4" preload="metadata"></video>
+                    <div class="play-button"></div>
+                    <div class="pause-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3>لماذا يجب أن تشارك في أسبوع خبراء الإعلانات للبارافارما 2026؟</h3>
+                    <p>في هذا الفيديو القصير ، يشرح المنظمون الفوائد الملموسة التي ستحصل عليها من المشاركة في الحدث.</p>
+                    
+                    <div class="video-benefits">
+                        <div class="benefit">استراتيجيات مضمونة لزيادة المبيعات</div>
+                        <div class="benefit">حلول لمشاكل الإشهار الشائعة</div>
+                        <div class="benefit">نصائح حصرية من خبراء القطاع</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Why This Event -->
+    <section class="why-event">
+        <div class="container">
+            <h2 class="section-heading">علاش هذا الحدث مهم لكم؟</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="features1.jpg" alt="Online Meeting">
+                    <div class="content">
+                        <h3>لقاء مجاني 100% عبر الإنترنت</h3>
+                        <p>جلسات مباشرة مع خبراء بدون أي تكلفة مالية</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="features2.png" alt="Pharma Focus">
+                    <div class="content">
+                        <h3>موجّه لأصحاب البارافارما والشركات المصنّعة</h3>
+                        <p>محتوى مخصص خصيصاً لاحتياجات قطاع البارافارما</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="features3.png" alt="Sales Growth">
+                    <div class="content">
+                        <h3>طرق عملية لزيادة المبيعات</h3>
+                        <p>استراتيجيات ميدانية قابلة للتطبيق فوراً</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="features4.jpg" alt="Ads Strategies" style="height: 100%;">
+                    <div class="content">
+                        <h3>استراتيجيات Facebook وGoogle</h3>
+                        <p>أفضل الممارسات للإعلانات الرقمية في 2026</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="features5.png" alt="Visibility">
+                    <div class="content">
+                        <h3>تحسين الظهور والتحويلات</h3>
+                        <p>كيفية تحويل الزوار إلى عملاء حقيقيين</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="features6.png" alt="Experiences">
+                    <div class="content">
+                        <h3>تجارب واقعية</h3>
+                        <p>من مختصين في القطاع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Target Audience -->
+    <section class="audience">
+        <div class="container">
+            <h2 class="section-heading">هذا الحدث موجّه خصيصاً إلى:</h2>
+            <div class="audience-list">
+                <div class="audience-item">أصحاب البارافارما</div>
+                <div class="audience-item">الشركات المصنّعة للمنتجات البارافارماسيّة</div>
+                <div class="audience-item">العلامات الخاصة بالعناية والمكمّلات</div>
+                <div class="audience-item">مورّدي وموزّعي المنتجات الصحية</div>
+                <div class="audience-item">الفرق التجارية داخل القطاع</div>
+                <div class="audience-item">فرق التسويق في الشركات الصحية</div>
+                <div class="audience-item">المسوّقين الرقميين في مجال الجمال والصحة</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Speakers -->
+    <section class="speakers">
+        <div class="container">
+            <h2 class="section-heading">الخبراء المشاركون</h2>
+            <p>سيتواجد خلال الحدث مجموعة من خبراءالإشهار المتخصصين في قطاع البارافارما لتقديم أحدث الاستراتيجيات والحلول العملية</p>
+            
+            <div class="speakers-list">
+                <div class="speaker">
+                    <img src="speakers1.jpg" alt="Media Buying Expert">
+                    <div class="content">
+                        <h3>خبراء Media Buying</h3>
+                        <p>متخصصون في شراء الإعلانات الرقمية لقطاع الصحة</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <img src="speakers5.jpg" alt="Marketing Consultant">
+                    <div class="content">
+                        <h3>مستشارين في التسويق</h3>
+                        <p>خبراء في تسويق المنتجات البارافارماسيّة</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <img src="speakers3.jpg" alt="Advertising Specialist">
+                    <div class="content">
+                        <h3>مختصين في الإشهار</h3>
+                        <p>محترفون في إشهارات Facebook وGoogle</p>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <img src="speakers2.jpg" alt="Growth Marketing Pro">
+                    <div class="content">
+                        <h3>محترفي Growth Marketing</h3>
+                        <p>متخصصون في نمو الشركات الصحية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-heading">الأسئلة الشائعة</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل الحدث مجاني؟
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        نعم، مجاني 100% للمهنيين في قطاع البارافارما. تم تصميم الحدث ليكون في متناول الجميع دون أي تكلفة مالية.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل المشاركة عن بُعد؟
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        نعم، عبر جلسات حية Online. يمكنكم المشاركة من أي مكان عبر الحاسوب أو الهاتف الذكي.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل هذا الحدث مفيد للشركات المصنّعة؟
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        طبعاً، مخصّص أيضاً للمصنّعين والموزعين. يحتوي البرنامج على جلسات خاصة بالشركات المصنعة لمساعدتها في تطوير استراتيجياتها الإعلانية.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        هل أحتاج خبرة سابقة؟
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        لا، الحدث مناسب لجميع المستويات. سواء كنت مبتدئاً أو محترفاً، ستجد محتوى قيّماً يناسب احتياجاتك.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>سجّلوا الآن وابدؤوا في رفع مبيعاتكم بالإشهار الاحترافي</h2>
+                <p>انضمّوا لآلاف المهنيين في قطاع البارافارما الذين يعتمدون على استراتيجيات الإشهار الرقمي لرفع المبيعات وتحسين الظهور داخل السوق.</p>
+                <a href="#form" class="btn-primary">سجّلوا الآن مجاناً</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Form Area -->
+    <section class="form-area" id="form">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">سجّل الآن مجاناً</h2>
+                <p class="form-subtitle">املأ النموذج أدناه واحصل على رابط الدخول الفوري للحدث</p>
+                
+                <form id="signup">
+                    <div id="formMessage"
+                        style="display: none; margin-top: 20px; padding: 15px; border-radius: 8px; text-align: center; font-weight: 600;">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>الاسم الكامل</label>
+                            <input type="text" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>رقم الهاتف</label>
+                            <input type="tel" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label>اسم الشركة / البارافارما</label>
+                            <input type="text" name="company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>دورك الوظيفي</label>
+                        <select name="role">
+                            <option value="">اختر دورك الوظيفي</option>
+                            <option>صاحب بارافارما</option>
+                            <option>مدير تسويق</option>
+                            <option>مسوق رقمي</option>
+                            <option>مدير مبيعات</option>
+                            <option>مدير إبداعي</option>
+                            <option>مدير مالي</option>
+                            <option>آخر</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">سجّل الآن مجاناً</button>
+               </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">أسبوع خبراء الإعلانات للبارافارما 2026</div>
+            <p class="footer-text">حدث رقمي مجاني يهدف لتطوير الإشهار الرقمي في قطاع البارافارما ورفع كفاءة الفرق التسويقية</p>
+            <p class="footer-text"><a style="color: #b4dc02; font-size: large;" href="https://coincarriere.com" target="_blank">www.coincarriere.com</a></p>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // ============ CONFIGURATION ============
+            // REPLACE WITH YOUR NEW DEPLOYMENT URL
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyxj53lDqaernANudzuQMGKm2ewKal2QORNpYmK5NFkLbRc5jgHQuxJ5eXfZOhwwQk/exec';
+            // =======================================
+
+            const form = document.getElementById('signup');
+            const message = document.getElementById('formMessage');
+
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'جاري الإرسال...';
+
+                    message.style.display = 'none';
+
+                    // Collect form data
+                    const formData = new FormData(form);
+                    const data = {
+                        timestamp: new Date().toISOString(),
+                        fullName: formData.get('fullName') || '',
+                        email: formData.get('email') || '',
+                        phone: formData.get('phone') || '',
+                        company: formData.get('company') || '',
+                        role: formData.get('role') || ''
+                    };
+
+                    console.log('Submitting:', data);
+
+                    try {
+                        const response = await fetch(SCRIPT_URL, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'text/plain;charset=utf-8',
+                            },
+                            body: JSON.stringify(data)
+                        });
+
+                        const result = await response.text();
+                        console.log('Response:', result);
+
+                        // Show success message
+                        message.style.display = 'block';
+                        message.style.background = '#d4edda';
+                        message.style.color = '#155724';
+                        message.style.border = '1px solid #c3e6cb';
+                        message.textContent = '✓ تم التسجيل بنجاح! سنتواصل معك قريباً';
+
+                        form.reset();
+                        message.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                    } catch (error) {
+                        console.error('Error:', error);
+
+                        message.style.display = 'block';
+                        message.style.background = '#f8d7da';
+                        message.style.color = '#721c24';
+                        message.style.border = '1px solid #f5c6cb';
+                        message.textContent = '✗ حدث خطأ. يرجى المحاولة مرة أخرى';
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    }
+                });
+            }
+
+            // Video controls
+            const playButton = document.querySelector('.play-button');
+            const pauseButton = document.querySelector('.pause-button');
+            const video = document.querySelector('.video-element');
+            const videoContainer = document.querySelector('.video-placeholder');
+
+            if (playButton && pauseButton && video && videoContainer) {
+                video.pause();
+
+                playButton.addEventListener('click', function () {
+                    video.play();
+                    playButton.style.display = 'none';
+                });
+
+                pauseButton.addEventListener('click', function () {
+                    video.pause();
+                    playButton.style.display = 'flex';
+                    pauseButton.style.display = 'none';
+                });
+
+                video.addEventListener('ended', function () {
+                    playButton.style.display = 'flex';
+                    pauseButton.style.display = 'none';
+                });
+
+                videoContainer.addEventListener('mouseenter', function () {
+                    if (!video.paused) {
+                        pauseButton.style.display = 'flex';
+                    }
+                });
+
+                videoContainer.addEventListener('mouseleave', function () {
+                    pauseButton.style.display = 'none';
+                });
+
+                video.addEventListener('click', function () {
+                    if (video.paused) {
+                        video.play();
+                        playButton.style.display = 'none';
+                    } else {
+                        video.pause();
+                        playButton.style.display = 'flex';
+                        pauseButton.style.display = 'none';
+                    }
+                });
+            }
+
+            // FAQ accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isOpen = answer.style.maxHeight;
+
+                    document.querySelectorAll('.faq-answer').forEach(el => {
+                        el.style.maxHeight = null;
+                        el.previousElementSibling.querySelector('span').textContent = '+';
+                    });
+
+                    if (!isOpen) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        question.querySelector('span').textContent = '−';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
