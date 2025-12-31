@@ -367,8 +367,8 @@
         .audience { 
             background: #f8fcff; 
             padding: 100px 0; 
-            border-top: 5px solid #0094d9; 
-            border-bottom: 5px solid #0094d9; 
+            /* border-top: 5px solid #0094d9; 
+            border-bottom: 5px solid #0094d9;  */
         }
         .audience h2 { 
             color: #1875bb; 
@@ -499,7 +499,129 @@
             font-size: 1em;
             color: #0b3f59;
         }
+        /* Interviews Section */
+        /* Interviews Section */
+        .interviews { 
+            background: #ffffff; 
+            padding: 100px 0; 
+        }
+        .interviews h2 { 
+            color: #16498c; 
+            font-size: 2.5em; 
+            text-align: center; 
+            margin-bottom: 35px; 
+            font-weight: 700;
+        }
+        .interviews p { 
+            font-size: 1.3em; 
+            text-align: center; 
+            max-width: 800px; 
+            margin: 0 auto 60px; 
+            color: #0b3f59;
+            line-height: 1.8;
+        }
+        .interviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
+        .interview-card {
+            height: 550px;
+            position: relative;
+            overflow: hidden;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            border: 1px solid #e6f7ff;
+            border-radius: 15px;
+        }
+
+        .interview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,148,217,0.15);
+            border-color: #0094d9;
+        }
+
+        .card-header {
+            height: 35%;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #16498c 0%, #0b3f59 100%);
+        }
+
+        .interviewer {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .interviewer-info {
+            text-align: center;
+        }
+
+        .interviewer-info h3 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .interviewer-info p {
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        .card-body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 65%;
+            background: rgba(255,255,255,0.95);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .interview-card:hover .card-body {
+            transform: translateY(-10px);
+        }
+
+        .card-body h4 {
+            font-size: 1.2em;
+            color: #16498c;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .quote {
+            font-size: 1em;
+            color: #0b3f59;
+            line-height: 1.6;
+            margin: 0;
+        }
         /* FAQ */
         .faq { 
             background: rgba(0,148,217,0.06); 
@@ -842,7 +964,7 @@
     <section class="speakers">
         <div class="container">
             <h2 class="section-heading">الخبراء المشاركون</h2>
-            <p>سيتواجد خلال الحدث مجموعة من خبراءالإشهار المتخصصين في قطاع البارافارما لتقديم أحدث الاستراتيجيات والحلول العملية ,تعرف على الملفات الشخصية لخبراء الإشهار بصالون توظيف 2026</p>
+            <p >سيتواجد خلال الحدث مجموعة من خبراءالإشهار المتخصصين في قطاع البارافارما لتقديم أحدث الاستراتيجيات والحلول العملية ,تعرف على الملفات الشخصية لخبراء الإشهار بصالون توظيف 2026</p>
             <p><a href="#" class="btn-primary" style="margin-top: 20px; display: inline-block;">الاطلاع على CV الخبراء</a>
             </p>
             <div class="speakers-list">
@@ -872,6 +994,78 @@
                     <div class="content">
                         <h3>محترفي Growth Marketing</h3>
                         <p>متخصصون في نمو الشركات الصحية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="interviews">
+        <div class="container">
+                <h2 class="section-heading">شهادات الخبراء</h2>
+                <p class="">يشارك محترفون معروفون رؤيتهم حول التأثير التحويلي لخبراء الإشهار المحترفين بمجال الإشهارالرقمي التي تطورها أكاديمية ميديا بايرز</p>
+
+            <div class="interviews-grid">
+                <!-- Interview 1: M. Mohamed Taharast -->
+                <div class="interview-card animate-fadeInUp">
+                    <div class="card-header">
+                        <div class="interviewer">
+                            <div class="avatar">
+                                <img src="tahraset.jpg"  alt="Mohammed Taharast">
+                            </div>
+                            <div class="interviewer-info">
+                                <h3>M. Mohamed Taharast</h3>
+                                <p>Creator de reels & Live Hashtag Producer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4>المهارات الفائقة في مجال الإشهارالرقمي</h4>
+                        <div class="quote">
+                            لقد أحدثت أكاديمية ميديا بايرز ثورة في التسويق الرقمي . إن منهجها العملي والابتكاري يطور مهارات استثنائية لدى خبراء الإشهار، مما يمكنهم من إتقان أدوات الحديثة ببراعة ملحوظة.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interview 2: Mme Nadia Coaching Business -->
+                <div class="interview-card animate-fadeInUp delay-1">
+                    <div class="card-header">
+                        <div class="interviewer">
+                            <div class="avatar">
+                                <img src="nadia.jpg" alt="Nadia Lakzir">
+                            </div>
+                            <div class="interviewer-info">
+                                <h3>Mme Nadia Lakzir</h3>
+                                <p>Business, Sales & Marketing Expert</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4>التأثير على التطوير الشخصي</h4>
+                        <div class="quote">
+                            ما يثير الإعجاب أكثر في تدريب خبراء الإشهار المحترفين بأكاديمية ميديا بايرز هو التحول الشخصي الذي يحدثه. فالمتدربون يطورون ليس فقط مهارات تقنية قوية، بل أيضاً ثقة بالنفس ورؤية استراتيجية تدفعهم نحو التميز المهني.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interview 3: M. Elouardy Hassan -->
+                <div class="interview-card animate-fadeInUp delay-2">
+                    <div class="card-header">
+                        <div class="interviewer">
+                            <div class="avatar">
+                                <img src="elouardi.jpeg" alt="Hassan El Ouardy">
+                            </div>
+                            <div class="interviewer-info">
+                                <h3>M. Elouardy Hassan</h3>
+                                <p>Entrepreneur in West Africa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4>التميز التشغيلي</h4>
+                        <div class="quote">
+                            كمسؤول توظيف في قطاع  التسويق الرقمي ، ألاحظ فرقاً كبيراً مع خريجي أكاديمية ميديا بايرز. إن قدرتهم على التكيف السريع مع البيئات المهنية الصعبة وإتقانهم للمهارات الحديثة الفائقة يجعل منهم مواهب مطلوبة من قبل جميع شركات القطاع
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1049,8 +1243,25 @@
                         message.style.background = '#d4edda';
                         message.style.color = '#155724';
                         message.style.border = '1px solid #c3e6cb';
-                        message.textContent = '✓ تم التسجيل بنجاح! ستتوصلون بتذكرتكم الإلكترونية ببريدكم الإلكتروني قريباً.';
+                        // message.innerHTML = `
+                        //     تهانينا و نحن سعداء بانضمامك لأسبوع توظيف ميدياباير 2026<br><br>
 
+                        //     تم تسجيل بياناتك و مستعدون لاستقبالك<br><br>
+
+                        //     📧 راقب بريدك الإلكتروني<br>
+                        //     ستصلك رسالة في غضون دقائق<br><br>
+
+                        //     ❓ لمزيد من الاستفسارات<br>
+                        //     لا تتردد في إرسال إيميل إلى <b>coicarriere@gmail.com</b><br><br>
+
+                        //     💡 جهّز أسئلتك خلال اللقاء<br>
+                        //     خبير الإشهار سيجيبك على كل المشاكل التي تعيق تطوير إعلاناتك الرقمية وكيفية مضاعفة أرباحك<br><br>
+
+                        //     👉 الرجوع للصفحة الرئيسية
+                        //     `;
+                        const link = document.createElement("a");
+                        link.href = "thankyou.html";
+                        link.click();
                         form.reset();
                         message.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
