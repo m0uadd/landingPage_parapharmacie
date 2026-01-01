@@ -796,6 +796,125 @@
             color: #16498c;
         }
 
+        /* Qualification Popup */
+        .qualification-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .qualification-overlay.active {
+            display: flex;
+        }
+        .qualification-popup {
+            background: white;
+            max-width: 650px;
+            width: 100%;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: popupSlideIn 0.4s ease-out;
+        }
+        @keyframes popupSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .qualification-note h3 {
+            color: #16498c;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .qualification-note > p {
+            color: #0b3f59;
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .qualification-points {
+            margin: 30px 0;
+        }
+        .qualification-points .point {
+            display: flex;
+            align-items: start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8fcff;
+            border-radius: 10px;
+            border-left: 4px solid #0094d9;
+        }
+        .qualification-points .point::before {
+            content: '✓';
+            color: #b4dc02;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-left: 12px;
+            flex-shrink: 0;
+        }
+        .qualification-points .point-text {
+            color: #0b3f59;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+        .cta-statement {
+            background: linear-gradient(135deg, #16498c 0%, #0b3f59 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: 600;
+            margin-top: 25px;
+        }
+        .popup-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        .popup-btn {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'montserrat', sans-serif;
+        }
+        .popup-btn-primary {
+            background: #b4dc02;
+            color: #0b3f59;
+        }
+        .popup-btn-primary:hover {
+            background: #ccfa04;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(180, 220, 2, 0.4);
+        }
+        .popup-btn-secondary {
+            background: #e0e0e0;
+            color: #666;
+        }
+        .popup-btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
         /* Footer */
         .footer {
             background: #0b3f59;
@@ -845,6 +964,168 @@
             }
             .hero-logo-right {
                 right: 15px;
+            }
+        }
+        
+        /* Qualification Popup Styles */
+        .qualification-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        .qualification-overlay.active {
+            display: flex;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .qualification-popup {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease-out;
+            direction: rtl;
+            text-align: right;
+        }
+        
+        @keyframes slideIn {
+            from { 
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .qualification-note h3 {
+            color: #0b3f59;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .qualification-note > p {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .qualification-points {
+            margin: 25px 0;
+        }
+        
+        .point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-right: 4px solid #dcfe11;
+        }
+        
+        .point-text {
+            color: #0b3f59;
+            font-size: 1em;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        
+        .cta-statement {
+            background: linear-gradient(135deg, #0b3f59 0%, #1a5a7a 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(11, 63, 89, 0.2);
+        }
+        
+        .popup-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .popup-btn {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 150px;
+        }
+        
+        .popup-btn-primary {
+            background: #dcfe11;
+            color: #0b3f59;
+        }
+        
+        .popup-btn-primary:hover {
+            background: #c8ea00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(220, 254, 17, 0.4);
+        }
+        
+        .popup-btn-secondary {
+            background: #e0e0e0;
+            color: #666;
+        }
+        
+        .popup-btn-secondary:hover {
+            background: #d0d0d0;
+        }
+        
+        @media (max-width: 768px) {
+            .qualification-popup {
+                padding: 25px;
+                width: 95%;
+            }
+            
+            .qualification-note h3 {
+                font-size: 1.4em;
+            }
+            
+            .qualification-note > p {
+                font-size: 1em;
+            }
+            
+            .point-text {
+                font-size: 0.95em;
+            }
+            
+            .popup-buttons {
+                flex-direction: column;
+            }
+            
+            .popup-btn {
+                width: 100%;
             }
         }
     </style>
@@ -1135,6 +1416,40 @@
                 <h2 class="form-title">سجّل الآن مجاناً</h2>
                 <p class="form-subtitle">املأ النموذج أدناه واحصل على رابط الدخول الفوري للحدث</p>
                 
+                <!-- Qualification Popup -->
+                <div class="qualification-overlay" id="qualificationOverlay">
+                    <div class="qualification-popup">
+                        <div class="qualification-note">
+                            <h3>ملاحظة هامة قبل التسجيل</h3>
+                            <p>هذا الحدث مخصص حصرياً للمهتمين الجادين بقطاع البارافارما، ونطلب منكم التأكد من توافق أهدافكم مع أهداف الحدث قبل التسجيل.</p>
+                            
+                            <div class="qualification-points">
+                                <div class="point">
+                                    <span class="point-text">أنت مسؤول عن الإشهار أو التسويق في بارافارما أو شركة منتجات بارافارماسيّة</span>
+                                </div>
+                                <div class="point">
+                                    <span class="point-text">تبحث عن حلول عملية لرفع مبيعات منتجاتك عبر الإعلانات الرقمية</span>
+                                </div>
+                                <div class="point">
+                                    <span class="point-text">لديك استعداد لتطبيق الاستراتيجيات التي ستتعلمها خلال الحدث</span>
+                                </div>
+                                <div class="point">
+                                    <span class="point-text">تخطط لتطوير فريقك أو مهاراتك في مجال Media Buying للقطاع الصحي</span>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-statement">
+                                إذا كانت هذه النقاط تنطبق عليك، فهذا الحدث صمم خصيصاً من أجلك!
+                            </div>
+                            
+                            <div class="popup-buttons">
+                                <button class="popup-btn popup-btn-primary" id="continueBtn">نعم، أريد المتابعة</button>
+                                <button class="popup-btn popup-btn-secondary" id="cancelBtn">لا، شكراً</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <form id="signup">
                     <div id="formMessage"
                         style="display: none; margin-top: 20px; padding: 15px; border-radius: 8px; text-align: center; font-weight: 600;">
@@ -1345,6 +1660,79 @@
                     }
                 });
             });
+            
+            // Qualification Popup Logic
+            const overlay = document.getElementById('qualificationOverlay');
+            const continueBtn = document.getElementById('continueBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+            
+            // Only proceed if all elements exist
+            if (overlay && continueBtn && cancelBtn && form) {
+                // Check if popup was already shown in this session
+                const hasSeenPopup = sessionStorage.getItem('qualificationPopupShown');
+                
+                // Get all form input fields
+                const formInputs = form.querySelectorAll('input, textarea, select');
+                
+                // Track if popup has been triggered
+                let popupTriggered = false;
+                
+                // Function to show popup
+                function showPopup() {
+                    if (!popupTriggered && !hasSeenPopup) {
+                        overlay.classList.add('active');
+                        popupTriggered = true;
+                    }
+                }
+                
+                // Add event listeners to all form fields
+                formInputs.forEach(input => {
+                    // Show popup on focus
+                    input.addEventListener('focus', function(e) {
+                        if (!hasSeenPopup && !popupTriggered) {
+                            e.preventDefault();
+                            this.blur(); // Remove focus from the field
+                            showPopup();
+                        }
+                    });
+                    
+                    // Show popup on click
+                    input.addEventListener('click', function(e) {
+                        if (!hasSeenPopup && !popupTriggered) {
+                            e.preventDefault();
+                            showPopup();
+                        }
+                    });
+                });
+                
+                // Continue button - allow form filling
+                continueBtn.addEventListener('click', function() {
+                    overlay.classList.remove('active');
+                    sessionStorage.setItem('qualificationPopupShown', 'true');
+                    // Focus on first input after closing
+                    if (formInputs.length > 0) {
+                        setTimeout(() => {
+                            formInputs[0].focus();
+                        }, 100);
+                    }
+                });
+                
+                // Cancel button - redirect away or close
+                cancelBtn.addEventListener('click', function() {
+                    overlay.classList.remove('active');
+                    sessionStorage.setItem('qualificationPopupShown', 'true');
+                    // Optionally redirect to another page or just close
+                    // window.location.href = '/'; // Uncomment to redirect
+                });
+                
+                // Close popup when clicking outside of it
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) {
+                        overlay.classList.remove('active');
+                        sessionStorage.setItem('qualificationPopupShown', 'true');
+                    }
+                });
+            }
         });
     </script>
 </body>
