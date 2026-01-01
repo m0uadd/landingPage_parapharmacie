@@ -41,6 +41,9 @@
             background: linear-gradient(
                 rgba(255,255,255,0.8),
                 rgba(255,255,255,0.4),
+                rgba(255,255,255,0.4),
+                rgba(255,255,255,0.4),
+                rgba(0,0,0,0.4)
                 rgba(0,0,0,0.4),
                 rgba(0,0,0,0.4)
             );
@@ -155,7 +158,7 @@
             position: relative;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,148,217,0.25);
+            /* box-shadow: 0 20px 50px rgba(0,148,217,0.25); */
         }
         .video-placeholder {
             background: none;
@@ -270,7 +273,7 @@
         .benefit {
             display: flex;
             align-items: center;
-            background: #e6f7ff;
+            background: #287aa1;
             padding: 10px 15px;
             border-radius: 30px;
             font-weight: 500;
@@ -854,7 +857,7 @@
             display: flex;
             align-items: start;
             margin-bottom: 20px;
-            padding: 15px;
+            padding: 5px;
             background: #f8fcff;
             border-radius: 10px;
             border-left: 4px solid #0094d9;
@@ -867,11 +870,11 @@
             margin-left: 12px;
             flex-shrink: 0;
         }
-        .qualification-points .point-text {
+        /* .qualification-points .point-text {
             color: #0b3f59;
             font-size: 1.05em;
             line-height: 1.6;
-        }
+        } */
         .cta-statement {
             background: linear-gradient(135deg, #16498c 0%, #0b3f59 100%);
             color: white;
@@ -993,11 +996,11 @@
         
         .qualification-popup {
             background: white;
-            padding: 40px;
+            padding: 10px;
             border-radius: 20px;
             max-width: 600px;
             width: 90%;
-            max-height: 80vh;
+            max-height: 90vh;
             overflow-y: auto;
             box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
             animation: slideIn 0.3s ease-out;
@@ -1037,8 +1040,8 @@
         .point {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 15px;
-            padding: 15px;
+            margin-bottom: 5px;
+            padding: 5px;
             background: #f8f9fa;
             border-radius: 10px;
             border-right: 4px solid #dcfe11;
@@ -1104,7 +1107,7 @@
         
         @media (max-width: 768px) {
             .qualification-popup {
-                padding: 25px;
+                padding: 5px;
                 width: 95%;
             }
             
@@ -1113,11 +1116,12 @@
             }
             
             .qualification-note > p {
-                font-size: 1em;
+                font-size: 0.5em;
             }
             
             .point-text {
-                font-size: 0.95em;
+                font-size: 0.7em;
+                padding: 5px;
             }
             
             .popup-buttons {
@@ -1143,13 +1147,31 @@
                 <h1>أكبر أسبوع رقمي مجاني لخبراء إعلانات البارافارما 2026</h1>
                 <h2>فرصة حقيقية للبارافارما والشركات المصنّعة للمنتجات البارافارماسيّة لتطوير الإشهار الرقمي ورفع المبيعات.</h2>
                 <p>انضمّوا إلى <span style="color:#0b3f59; font-weight: 500;">"أسبوع الميديا بايرز 2026"</span> الذي يجمع خبراء الإشهار الرقمي المتخصصين في قطاع البارافارما، واكتشفوا كيف يمكن للإعلانات الاحترافية أن ترفع نموّكم وتزيد مبيعاتكم بطريقة فعّالة ومضمونة.</p>
+                <div class="video-container">
+                <div class="video-placeholder">
+                    <video class="video-element" src="video.mp4" preload="metadata"></video>
+                    <div class="play-button"></div>
+                    <div class="pause-button"></div>
+                </div>
+                <div class="video-info">
+                    <h3>لماذا يجب أن تشارك في أسبوع خبراء الإعلانات للبارافارما 2026؟</h3>
+                    <p>في هذا الفيديو القصير ، يشرح المنظمون الفوائد الملموسة التي ستحصل عليها من المشاركة في الحدث.</p>
+                    
+                    <div class="video-benefits">
+                        <div class="benefit">استراتيجيات مضمونة لزيادة المبيعات</div>
+                        <div class="benefit">حلول لمشاكل الإشهار الشائعة</div>
+                        <div class="benefit">نصائح حصرية من خبراء القطاع</div>
+                    </div>
+                </div>
+            </div>
+                <p></p>
                 <a href="#form" class="btn-primary">سجّلوا الآن مجاناً</a>
             </div>
         </div>
     </section>
 
     <!-- Video Conversion Section -->
-    <section class="video-section">
+    <!-- <section class="video-section">
         <div class="container">
             <h2 class="section-title"> شاهد فيديو التعريفي بالحدث المجاني</h2>
             <p class="section-subtitle">رسالة خاصة من المنظمين تشرح القيمة الحقيقية التي ستحصلون عليها من خلال المشاركة في هذا الحدث الاستثنائي</p>
@@ -1172,7 +1194,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Section 2: Why This Event -->
     <section class="why-event">
@@ -1420,7 +1442,7 @@
                 <div class="qualification-overlay" id="qualificationOverlay">
                     <div class="qualification-popup">
                         <div class="qualification-note">
-                            <h3>ملاحظة هامة قبل التسجيل</h3>
+                            <h3>⚠️ ملاحظة هامة قبل التسجيل</h3>
                             <p>هذا الحدث مخصص حصرياً للمهتمين الجادين بقطاع البارافارما، ونطلب منكم التأكد من توافق أهدافكم مع أهداف الحدث قبل التسجيل.</p>
                             
                             <div class="qualification-points">
@@ -1467,7 +1489,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label>رقم الهاتف</label>
-                            <input type="tel" name="phone">
+                            <input type="tel" name="phone" required>
                         </div>
                         <div class="form-group">
                             <label>اسم الشركة / البارافارما</label>
@@ -1720,9 +1742,9 @@
                 // Cancel button - redirect away or close
                 cancelBtn.addEventListener('click', function() {
                     overlay.classList.remove('active');
-                    sessionStorage.setItem('qualificationPopupShown', 'true');
+                    sessionStorage.setItem('qualificationPopupShown', 'false');
                     // Optionally redirect to another page or just close
-                    // window.location.href = '/'; // Uncomment to redirect
+                    window.location.href = '#';
                 });
                 
                 // Close popup when clicking outside of it
