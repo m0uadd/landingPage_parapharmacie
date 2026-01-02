@@ -528,7 +528,9 @@
         }
 
         .interview-card {
-            height: 450px;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
             position: relative;
             overflow: hidden;
             background: #ffffff;
@@ -544,14 +546,13 @@
         }
 
         .card-header {
-            height: 45%;
+            min-height: 45%;
             position: relative;
             overflow: hidden;
             background: linear-gradient(135deg, #16498c 0%, #0b3f59 100%);
         }
 
         .interviewer {
-            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -561,8 +562,8 @@
         }
 
         .avatar {
-            width: 100px;
-            height: 200px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             overflow: hidden;
             border: 4px solid white;
@@ -573,6 +574,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
         }
 
         .interviewer-info {
@@ -593,16 +595,12 @@
         }
 
         .card-body {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 55%;
             background: rgba(255,255,255,0.95);
             display: flex;
             flex-direction: column;
             padding: 20px;
             transition: transform 0.3s;
+            flex: 1;
         }
 
         .interview-card:hover .card-body {
@@ -946,7 +944,40 @@
             background: #dcfe11;
         }
 
-        @media (max-width: 768px) {
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #0b3f59;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(11, 63, 89, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .scroll-to-top:hover {
+            background: #16498c;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(11, 63, 89, 0.6);
+        }
+        .scroll-to-top.show {
+            display: flex;
+        }
+        .scroll-to-top::before {
+            content: '↑';
+            font-weight: bold;
+        }
+
+            @media (max-width: 768px) {
             .hero h1 { font-size: 2.2em; }
             .hero h2 { font-size: 1.5em; }
             .hero p { font-size: 1em; }
@@ -965,9 +996,14 @@
             .hero-logo-right {
                 right: 15px;
             }
-        }
-        
-        /* Qualification Popup Styles */
+            .scroll-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 20px;
+            }
+        }        /* Qualification Popup Styles */
         .qualification-overlay {
             display: none;
             position: fixed;
@@ -1491,7 +1527,12 @@
                             <option>آخر</option>
                         </select>
                     </div>
-                    <button type="submit" class="submit-btn">سجّل الآن مجاناً</button>
+                    <div class="form-group">
+                        <label>ما هي التحديات التي تواجهها حالياً في الإشهار الرقمي لمنتجاتك البارافارماسيّة؟</label>
+                        <textarea rows="3" placeholder="يرجى وصف التحديات التي تواجهها (اختياري لكن موصى به)" style="resize: vertical;"></textarea>
+                    </div>
+        <button type="submit" class="submit-btn">أؤكد أنني مهتم جاد وأسجل الآن مجاناً</button>
+
                </form>
             </div>
         </div>
@@ -1510,6 +1551,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop"></button>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -1737,8 +1781,29 @@
                     }
                 });
             }
+
+            // Scroll to Top Button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            if (scrollToTopBtn) {
+                // Show/hide button based on scroll position
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.classList.add('show');
+                    } else {
+                        scrollToTopBtn.classList.remove('show');
+                    }
+                });
+                
+                // Scroll to top when clicked
+                scrollToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
         });
-    </script>
+    </script>
 </body>
 </html>
-
