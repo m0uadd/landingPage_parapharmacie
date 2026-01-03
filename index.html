@@ -1633,10 +1633,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         //     `;
                         const link = document.createElement("a");
                         link.href = "thankyou.html";
-                        // link.click();
-                        console.log({formData});
-                        console.log({remarque: formData.get('remarque')});
-                        // form.reset();
+                        link.click();
+                        // console.log({formData});
+                        // console.log({remarque: formData.get('remarque')});
+                        form.reset();
                         message.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
                     } catch (error) {
