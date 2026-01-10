@@ -1494,15 +1494,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <!-- Section 7: Form Area -->
+
     <section class="form-area" id="form">
-        <div class="container">
-            <div class="form-container">
-                <h2 class="form-title">سجّل الآن مجاناً</h2>
-                <p class="form-subtitle">املأ النموذج أدناه واحصل على رابط الدخول للحدث</p>
-                
-                <!-- Qualification Popup -->
-                <div class="qualification-overlay" id="qualificationOverlay">
+    <div class="container">
+        <div class="form-container">
+            <h2 class="form-title">سجّل الآن مجاناً</h2>
+            <p class="form-subtitle">املأ النموذج أدناه واحصل على تذكرتك الإلكترونية للدخول الفوري للحدث</p>
+
+            <div class="qualification-overlay" id="qualificationOverlay">
                     <div class="qualification-popup">
                         <div class="qualification-note">
                             <h3>⚠️ ملاحظة هامة قبل التسجيل</h3>
@@ -1534,55 +1533,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </div>
-                
-                <form id="signup">
-                    <div id="formMessage"
-                        style="display: none; margin-top: 20px; padding: 15px; border-radius: 8px; text-align: center; font-weight: 600;">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>الاسم الكامل</label>
-                            <input type="text" name="fullName" required>
-                        </div>
-                        <div class="form-group">
-                            <label>البريد الإلكتروني</label>
-                            <input type="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>رقم الهاتف</label>
-                            <input type="tel" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label>اسم الشركة / البارافارما</label>
-                            <input type="text" name="company">
-                        </div>
+            <form id="signup">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" required>
                     </div>
                     <div class="form-group">
-                        <label>دورك الوظيفي</label>
-                        <select name="role">
-                            <option value="">اختر دورك الوظيفي</option>
-                            <option>صاحب بارافارما</option>
-                            <option>مدير تسويق</option>
-                            <option>مسوق رقمي</option>
-                            <option>مدير مبيعات</option>
-                            <option>مدير إبداعي</option>
-                            <option>مدير مالي</option>
-                            <option>آخر</option>
-                        </select>
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" pattern="[0-9\s\-\+\(\)]{1,}" inputmode="tel"  required title="يرجى إدخال رقم هاتف صحيح">
                     </div>
                     <div class="form-group">
-                        <label>ما هي التحديات التي تواجهها حالياً في الإشهار الرقمي لمنتجاتك البارافارماسيّة؟</label>
-                        <textarea rows="3" name="remarque" placeholder="يرجى وصف التحديات التي تواجهها (اختياري لكن موصى به)" style="resize: vertical;"></textarea>
+                        <label>اسم الشركة / البارافارما</label>
+                        <input type="text" required>
                     </div>
-        <button type="submit" class="submit-btn">أؤكد أنني مهتم جاد وأسجل الآن مجاناً</button>
-
-               </form>
-            </div>
+                </div>
+                <div class="form-group">
+                    <label>دورك الوظيفي</label>
+                    <select required>
+                        <option value="">اختر دورك الوظيفي</option>
+                        <option>صاحب بارافارما</option>
+                        <option>مدير تسويق</option>
+                        <option>مسوق رقمي</option>
+                        <option>مدير مبيعات</option>
+                        <option>مدير إبداعي</option>
+                        <option>مدير مالي</option>
+                        <option>آخر</option>
+                    </select>
+                </div>
+                <!-- Nouveau champ 1 : Type de contrat -->
+                <div class="form-group">
+                    <label>أي شكل من عقد الوظيف مطلوب؟</label>
+                    <div class="form-row" style="gap: 15px; margin-top: 10px;">
+                        <label class="checkbox-option">
+                            <input type="radio" name="type_contrat" value="1" required>
+                            <span>عقد دائم</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="radio" name="type_contrat" value="2" required >
+                            <span>مدة محددة</span>
+                        </label>
+                    </div>
+                </div>
+                <!-- Nouveau champ 2 : Plateformes publicitaires -->
+                <div class="form-group">
+                    <label>منصات الإعلانات التي تستخدمها أو تخطط لاستخدامها:</label>
+                    <div class="form-row" style="gap: 15px; margin-top: 10px; flex-wrap: wrap;">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="plateformes[]" value="1">
+                            <span>ميتا</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="plateformes[]" value="2">
+                            <span>جوجل</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="plateformes[]" value="3">
+                            <span>تيك توك</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="plateformes[]" value="4">
+                            <span>أخرى</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>ما هي التحديات التي تواجهها حالياً في الإشهار الرقمي لمنتجاتك البارافارماسيّة؟</label>
+                    <textarea rows="3" placeholder="يرجى وصف التحديات التي تواجهها (إجباري - لضمان ملاءمة الحدث لاحتياجاتك)" style="resize: vertical;" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>أؤكد أنني مهني مؤهل في قطاع البارافارما وأبحث فعلاً عن حلول لتطوير إستراتيجيتي الإعلانية</span>
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">أؤكد أنني مهتم جاد وأسجل الآن مجاناً</button>
+            </form>
+            
+            <p style="text-align: center; margin-top: 30px; font-size: 0.95em; color: #666;">
+                ملاحظة: هذا النموذج يمكن استبداله بسهولة بـ Elementor Form | WPForms | HubSpot | Contact Form 7
+            </p>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1608,7 +1647,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             // =======================================
 
             const form = document.getElementById('signup');
-            const message = document.getElementById('formMessage');
+            // const message = document.getElementById('formMessage');
 
             if (form) {
                 form.addEventListener('submit', async (e) => {
@@ -1619,7 +1658,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     submitBtn.disabled = true;
                     submitBtn.textContent = 'جاري الإرسال...';
 
-                    message.style.display = 'none';
+                    // message.style.display = 'none';
 
                     // Collect form data
                     const formData = new FormData(form);
@@ -1648,10 +1687,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         console.log('Response:', result);
 
                         // Show success message
-                        message.style.display = 'block';
-                        message.style.background = '#d4edda';
-                        message.style.color = '#155724';
-                        message.style.border = '1px solid #c3e6cb';
+                        // message.style.display = 'block';
+                        // message.style.background = '#d4edda';
+                        // message.style.color = '#155724';
+                        // message.style.border = '1px solid #c3e6cb';
                         // message.innerHTML = `
                         //     تهانينا و نحن سعداء بانضمامك لأسبوع توظيف ميدياباير 2026<br><br>
 
